@@ -32,3 +32,37 @@ Array.from(lis).forEach(function(item){
  const wfm= document.querySelector('#book-list li:nth-child(2) .name') -> 2nd element
  const wfm= document.querySelector('#book-list li .name') -> 2nd element -> 1st element not all
  var bookslist = document.querySelector('#book-list li .name') -> all the elements
+
+ ### QuerySElectorAll
+ Returns a node list, need not be converted into an array.
+
+ ### textContent
+ used to get the text.
+ var books = document.querySelectorAll("#book-list li .name");
+ books.forEach(function(book){
+     console.log(book.textContent);
+ });
+
+#### Output will be 
+
+Name of the Wind
+The Wise Man's Fear
+Kafka on the Shore
+The Master and the Margarita
+
+### How to change the textContent 
+var books = document.querySelectorAll("#book-list li .name");
+books.forEach(function(book){
+    book.textContent ="test";
+});
+
+### How can we just append data to textContent
+
+var books = document.querySelectorAll("#book-list li .name");
+books.forEach(function(book){
+    book.textContent +="test";
+});
+
+### How do we change HTML of am element. It's done with innerHTML
+const bookList = document.querySelector("#book-list");
+bookList.innerHTML = '<h2> books and more </h2>';
